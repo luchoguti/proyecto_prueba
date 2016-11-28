@@ -43,6 +43,9 @@ body {
 }
 .grid-data{
     background-color: white;
+    margin-top: 37px;
+    width: 47%;
+    margin-left: 25px;
 }
 img.img-responsive.img-circle {
     position: absolute;
@@ -58,6 +61,9 @@ article.white-panel {
     position: relative;
     bottom: 20px;
 }
+/*
+ de 768 hacia abajo
+*/
 @media (max-width: 768px) {
   .navbar-default #formID #q {
     min-width: 100%;
@@ -80,6 +86,12 @@ article.white-panel {
       font-size: 18px;
    }
    .inpt-personj{
-  margin-top: 15px; float: initial;
-}
+      margin-top: 15px; float: initial;
+    }
+    img.img-responsive.img-circle {
+    position: relative;
+    top: -13px;
+    right: 0px;
+    height: 184px;
+  }
 }
