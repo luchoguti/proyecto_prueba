@@ -1,0 +1,85 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26/11/2016, 05:49:42 PM
+    Author     : Guti
+*/
+body {
+    background-color: #eee;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+.detalle_personajes.col-md-10.col-xs-10.col-sm-10 {
+    background-color: #f4f4f4;
+}
+.carrito_comic{
+    background-color: #ebebeb;
+}
+.inpt-personj{
+  margin-top: 15px; float: right;
+}
+.navbar {
+    min-height: 70px;
+    border-radius: 0px;
+    margin: 0px;
+}
+.navbar-default #formID #q {
+  min-width: 457px;
+  height: 48px;
+}
+.navbar-default .navbar-collapse {
+  text-align: center;
+}
+.navbar-default {
+    background-color: #2d2727;
+}
+#logo_inicial{
+    width: 130px;
+    padding: 4px;
+    margin-left: 17px;
+    margin-top: 5px;
+}
+.grid-data{
+    background-color: white;
+}
+img.img-responsive.img-circle {
+    position: absolute;
+    top: -13px;
+    right: 28px;
+    height: 196px;
+}
+.row{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+article.white-panel {
+    position: relative;
+    bottom: 20px;
+}
+@media (max-width: 768px) {
+  .navbar-default #formID #q {
+    min-width: 100%;
+  }
+  .navbar-default .navbar-collapse {
+    text-align: left;
+  }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #2d2727;
+   }
+   .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    margin: auto;
+    padding: 4px;
+   }
+   #logo_inicial{
+        margin: auto;
+        padding-top: 9px;
+   }
+   h1{
+      font-size: 18px;
+   }
+   .inpt-personj{
+  margin-top: 15px; float: initial;
+}
+}
