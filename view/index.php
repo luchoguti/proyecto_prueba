@@ -1,5 +1,8 @@
 
-
+<?php
+ echo '<pre>';
+ print_r($query);
+?>
     <!--<div class="col-md-10 col-xs-10 col-sm-10">
         <div class="grid-data col-md-5">
             <div class="col-md-6 col-xs-6 col-sm-6">
