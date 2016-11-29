@@ -61,6 +61,14 @@ article.white-panel {
     position: relative;
     bottom: 20px;
 }
+.person_descrip{
+    height: 182px;
+    max-height: 182px;
+}
+.relacion_comics{
+    height: 50px;
+    max-height: 50px;
+}
 /*
  de 768 hacia abajo
 */
