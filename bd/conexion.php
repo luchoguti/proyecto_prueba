@@ -9,7 +9,7 @@
 class conexion{
     
     public static function getconnection(){
-        $conn= new mysqli("localhost", "root", "", "inventarios");
+        $conn= new mysqli("localhost", "root", "abc123", "inventarios");
         $conn->query("SET NAME 'utf8'");
         return $conn;
                 

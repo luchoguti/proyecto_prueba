@@ -1,6 +1,6 @@
 <?php
-//echo '<pre>';
-//print_r($query);
+echo '<pre>';
+print_r($query);
 ?>
 <div class="detalle_personajes col-md-10 col-xs-10 col-sm-10">
     <div class="container">
@@ -87,3 +87,4 @@
     </div>
 </div>
 <div class="col-md-2 col-xs-2 col-sm-2 carrito_comic">.col-md-4</div>
+
