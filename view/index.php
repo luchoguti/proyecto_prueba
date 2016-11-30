@@ -24,11 +24,16 @@
         <div class="row">
             <div class="tab-content">
             <?php
-                $count_reg= ceil($query['data']['count']/10);
+                $numpage=10;
+                $count_reg= ceil($query['data']['count']/$numpage);
                 $i=1;
                 $j=1;
                 foreach ($query['data']['results'] as $key => $datos) {
-                if($i==1 || fmod($i, 10) == 0){
+                $control=($numpage*$j)+1;
+                if($i==1 || $control==$i){
+                    if($i!=1){
+                        $j++;
+                    }
                     $optTag=($i==1)?'active':'';
                     echo '<div class="tab-pane '.$optTag.'" id="tab'.$j.'" role="tabpanel">';
                 }
@@ -91,12 +96,11 @@
                 </div>
             </div>
             <?php 
-            $i++; 
-                if(($i/10)==$j || $query['data']['count']==$i){
-                    echo '</div>';
-                    $j++;
-                }
-                
+            
+                    if(($i/$numpage)==$j || $query['data']['count']==$i){
+                        echo '</div>';
+                    }
+                    $i++; 
                 } 
             ?>
             </div>
