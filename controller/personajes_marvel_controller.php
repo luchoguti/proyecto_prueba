@@ -17,10 +17,8 @@ class personajes_marvel_controller{
     }
             
     function index(){
-        //header
-        //las vista que requiera
-        //footer
-        $title = "Busqueda Personajes";
+
+        $title = "Todos los personajes";
         $query = $this->model_person_marvel->get();
         require_once 'view/header.php';
         require_once 'view/index.php';
@@ -28,4 +26,12 @@ class personajes_marvel_controller{
 
     }
     
+    function autocomplete_personaje($nameStartsWith){
+        
+        $title = "Busqueda Personajes";
+        $query = $this->get_query_name->get_query_name($nameStartsWith);
+
+        echo require_once 'view/index.php';
+
+    }
 }

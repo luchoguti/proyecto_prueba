@@ -69,6 +69,15 @@ article.white-panel {
     height: 50px;
     max-height: 50px;
 }
+.pager .active a{
+    background-color : #337AB7;
+    color: #FFF;
+    border: 0px;
+}
+.pager li>a:focus, .pager li>a:hover {
+    text-decoration: none;
+    background-color: #4278a7;
+}
 /*
  de 768 hacia abajo
 */

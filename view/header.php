@@ -31,7 +31,7 @@ and open the template in the editor.
 
       <form class="navbar-form" role="search" id="formID">
         <div class="input-group">
-          <input class="form-control" id="q" placeholder="Search charter" name="q" type="text">
+            <input class="form-control" id="q" placeholder="Search charter" name="q" type="text" onkeyup="search_charters(this);">
           <div class="input-group-btn">
                 <button class="btn btn-default" type="submit" style="height: 48px;"><i class="glyphicon glyphicon-search"></i></button>
             </div>
