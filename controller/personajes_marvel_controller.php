@@ -26,10 +26,10 @@ class personajes_marvel_controller{
 
     }
     
-    function autocomplete_personaje($nameStartsWith){
-        
+    function autocomplete_personaje(){
+        $nameStartsWith=$_POST['string_autocomplete'];
         $title = "Busqueda Personajes";
-        $query = $this->get_query_name->get_query_name($nameStartsWith);
+        $query = $this->model_person_marvel->get_query_name($nameStartsWith);
 
         echo require_once 'view/index.php';
 

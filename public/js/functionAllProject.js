@@ -31,12 +31,11 @@ function search_charters(domElement){
     valueInput=$(domElement).val();
     stringRead=valueInput.length;
     if(stringRead > 1){
-       parameters={c:'personajes_marvel',a:'autocomplete_personaje'};
+       parameters={c:'personajes_marvel',a:'autocomplete_personaje',string_autocomplete:valueInput};
        $.ajax({
         url:'./index.php',
         type:'POST',
         data:parameters,
-        dataType:'json',
         beforeSend: function() {
 
         },
@@ -44,7 +43,7 @@ function search_charters(domElement){
 
         },
         success:function(resultado){
-            console.log(resultado);
+            $('#query_result').html(resultado);
         },
         error:function(){alert('Error: function search_charters');}
       });

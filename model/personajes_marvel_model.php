@@ -46,9 +46,10 @@ class personajes_marvel_model{
         // create a new cURL resource
         $ch = curl_init();
         // set URL and other appropriate options
-        $query_name=($name!='')?'&nameStartsWith='.$name.'':'';
-        $query_orderBy=($orderBy!='')?'&orderBy='.$orderBy.'':'';
-        curl_setopt($ch, CURLOPT_URL, "http://gateway.marvel.com:80/v1/public/characters?ts=$timestamp&limit=$this->limit.$query_name.$query_orderBy&apikey=$this->key_public&hash=$md5");
+        $query_name=($name!='')?'&nameStartsWith='.$name:'';
+        $query_orderBy=($orderBy!='')?'&orderBy='.$orderBy:'';
+        
+        curl_setopt($ch, CURLOPT_URL, "http://gateway.marvel.com:80/v1/public/characters?ts=$timestamp&limit=$this->limit$query_name$query_orderBy&apikey=$this->key_public&hash=$md5");
         
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

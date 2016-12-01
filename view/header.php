@@ -42,6 +42,26 @@ and open the template in the editor.
   </div>
   <!-- /.container-fluid -->
    </nav>
-            
-        </header>
+</header>
+<div class="detalle_personajes col-md-10 col-xs-10 col-sm-10">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-12 col-sm-6">
+                <section>
+                    <img style='float:left;margin-right:10px;' src="public/icons/characters.png">
+                    <p><h1><b>Characters</b></h1></p>
+                </section>
+            </div>
+            <div class="col-md-6 col-xs-12 col-sm-6">
+                <div class="inpt-personj col-md-6">
+                    <section>
+                        <select name="order_personajes" class="form-control">
+                            <option>Sort by</option>
+                        </select>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
