@@ -22,6 +22,7 @@ class personajes_marvel_controller{
         $query = $this->model_person_marvel->get();
         require_once 'view/header.php';
         require_once 'view/index.php';
+        require_once 'view/modalComics.php';
         require_once 'view/footer.php';
 
     }

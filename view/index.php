@@ -32,7 +32,7 @@
                         ?>
                         <p><?php echo $str; ?></p>
                         <p>
-                            <button type="button" class="btn btn-danger">VIEW MORE</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".firstModal">VIEW MORE</button>
                         </p>
                     </article>
                 </div>
