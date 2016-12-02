@@ -26,8 +26,8 @@ class personajes_marvel_model{
         return json_decode($this->personajes, true);
     }
     
-    function get_query_name($nameStartsWith){
-        $orderBy='';
+    function get_query_name($nameStartsWith,$orderBy){
+        
         $this->get_query_api($nameStartsWith, $orderBy);
         return json_decode($this->personajes, true);
         

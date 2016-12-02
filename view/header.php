@@ -29,14 +29,14 @@ and open the template in the editor.
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="navbar-collapse collapse" id="navbar-collapse" aria-expanded="false" style="height: 1px;">
 
-      <form class="navbar-form" role="search" id="formID">
+      <div class="navbar-form" role="search" id="formID">
         <div class="input-group">
-            <input class="form-control" id="q" placeholder="Search charter" name="q" type="text" onkeyup="search_charters(this);">
+            <input class="form-control" placeholder="Search charter" name="q" type="text" id="search_input">
           <div class="input-group-btn">
-                <button class="btn btn-default" type="submit" style="height: 48px;"><i class="glyphicon glyphicon-search"></i></button>
+                <button class="btn btn-default" type="submit" style="height: 48px;" onclick="search_charters(0);"><i class="glyphicon glyphicon-search"></i></button>
             </div>
         </div>
-      </form>
+      </div>
     </div>
     <!-- /.navbar-collapse -->
   </div>
@@ -55,8 +55,12 @@ and open the template in the editor.
             <div class="col-md-6 col-xs-12 col-sm-6">
                 <div class="inpt-personj col-md-6">
                     <section>
-                        <select name="order_personajes" class="form-control">
-                            <option>Sort by</option>
+                        <select name="order_personajes" class="form-control" id="sort_by"  onchange="search_charters(1);">
+                            <option value="">Sort by</option>
+                            <option value="name">Name characters order ascendant</option>
+                            <option value="modified">Modified characters order ascendant</option>
+                            <option value="-name">Name characters order descending</option>
+                            <option value="-modified">Modified characters order descending</option>
                         </select>
                     </section>
                 </div>

@@ -27,20 +27,22 @@ function upgradePreNext(number){
        $('ul.pager li:eq(6)').attr("class", "disabled");
    }
 }
-function search_charters(domElement){
-    valueInput=$(domElement).val();
-    stringRead=valueInput.length;
-    if(stringRead > 1){
-       parameters={c:'personajes_marvel',a:'autocomplete_personaje',string_autocomplete:valueInput};
+function search_charters(filter){
+    valueInput_search=$('#search_input').val();
+    valueSelect_ordeBy=$('#sort_by').val();
+    stringRead=valueInput_search.length;
+    $body = $("body");
+    if(stringRead > 1 || filter==1){
+       parameters={c:'personajes_marvel',a:'autocomplete_personaje',string_autocomplete:valueInput_search,sort:valueSelect_ordeBy};
        $.ajax({
         url:'./index.php',
         type:'POST',
         data:parameters,
         beforeSend: function() {
-
+            waitingDialog.show('wait please...');
         },
         complete: function(){
-
+            waitingDialog.hide();
         },
         success:function(resultado){
             $('#query_result').html(resultado);

@@ -95,10 +95,10 @@
                     <li class="previous" onclick="goTo(1);"><a href="#"><span aria-hidden="true">←</span> Previous</a></li>
                 <?php
                   for ($paginas = 1; $paginas <= $count_reg; $paginas++) {
-                     $tag_1=($paginas==1)?'class="active" id="first"':'';
-                     $tag_2=($paginas==$count_reg)?'id="last"':'';
+                     $tag_1=($paginas==1)?' class="active" id="first"':'';
+                     $tag_2=($paginas==$count_reg)?' id="last"':'';
                 ?>
-                <li <?php echo $tag_1.$tag_2;?> >
+                <li<?php echo $tag_1.$tag_2;?>>
                     <a aria-controls="tab<?php echo $paginas; ?>" data-toggle="tab" href="#tab<?php echo $paginas; ?>" role="tab"><?php echo $paginas; ?></a>
                 </li>
                 <?php } ?>                   
