@@ -24,7 +24,7 @@ if(!empty($_REQUEST['m'])){
     $controler->index();
 }
 */
-$controller = 'personajes_marvel';
+$controller = 'characters';
 
 if(!isset($_REQUEST['c'])){
 

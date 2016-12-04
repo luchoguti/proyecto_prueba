@@ -10,6 +10,12 @@ and open the template in the editor.
         <title><?php echo $title;?> - Aplication </title>
         <link href="public/css/bootstrap.min.css" rel="stylesheet">
         <link href="public/css/panel_inicial.css" rel="stylesheet">
+        
+        <script type="text/javascript" src="public/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="public/js/waiting.js"></script>
+        <script type="text/javascript" src="public/js/functionAllProject.js"></script>
+        
     </head>
     <!--<img src="public/img/marvel_logo.png" class="img-responsive" alt="Logo Marvel" width="130">--> 
     <body>
@@ -67,5 +73,11 @@ and open the template in the editor.
             </div>
         </div>
     </div>
+</div>
+<div class="col-md-2 col-xs-2 col-sm-2 carrito_comic">
+    <article id="art-fav">
+        <img src="public/icons/favourites.png" id="img-icon-fav">
+        <h3><b id="txt-img-fav">My favourites</b></h3>
+    </article>
 </div>
 

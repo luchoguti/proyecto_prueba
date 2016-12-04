@@ -32,20 +32,20 @@ body .container
   border-radius: 20px;
   height: 120px;
   width : 60px;
-  margin-top: 30px;
+  margin-top: 100px;
   margin-left:15px;
 }
 /* Next button  */
 .media-carousel .carousel-control.right 
 {
-  right: -12px !important;
+  right: 19px !important;
   background-image: none;
   background: none repeat scroll 0 0 #222222;
   border: 1px solid #FFFFFF;
   border-radius: 20px;
   height: 120px;
   width : 60px;
-  margin-top: 30px;
+  margin-top: 100px;
   margin-right: -15px;
 }
 /* Changes the position of the indicators */
@@ -65,21 +65,21 @@ body .container
 {
   background: #333333;
 }
-.media-carousel img
-{
-  width: 100%;
-  height: 180px;
-}
 /* End carousel */
 
 #btn-buy{
     background-color: gainsboro;
-    height: 42px;
+    max-height: 68px;
+    cursor: pointer;
+    text-align: center;
+    padding: 15px;
 }
 #btn-add-fav{
     background-color: #322827;
-    height: 42px;
+    max-height: 68px;
     cursor: pointer;
+    text-align: center;
+    padding: 15px;
 }
 .txt_panel_model{
     padding-top: 10px;
@@ -93,4 +93,29 @@ body .container
 }
 #btn-add-fav:hover{
     opacity:0.8;
+}
+#btn-buy:hover{
+    opacity:0.8;
+}
+.txt-btn-added, .txt-btn-buy{
+    color: #ed1d24;
+    padding-left: 11px;
+}
+.close {
+    opacity: 1;
+}
+.modal-header{
+    border-bottom: 0px;
+}
+.modal-body {
+    padding: 0px; 
+}
+.without-result{
+    min-height: 240px;
+    text-align: center;
+}
+.p-description-comics{
+    max-height: 224px;
+    overflow: overlay;
+    padding-right: 19px;
 }

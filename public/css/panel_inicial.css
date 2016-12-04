@@ -16,6 +16,8 @@ body {
 }
 .carrito_comic{
     background-color: #ebebeb;
+    max-height: 1790px;
+    overflow: overlay;
 }
 .inpt-personj{
   margin-top: 15px; float: right;
@@ -77,6 +79,44 @@ article.white-panel {
 .pager li>a:focus, .pager li>a:hover {
     text-decoration: none;
     background-color: #4278a7;
+}
+.without-result-search{
+    text-align: center;
+}
+.txt-description-character{
+    max-height: 124px;
+    overflow: hidden;
+}
+#art-fav{
+    text-align: center;
+    padding-bottom: 19px;
+}
+#img-icon-fav{
+    float: left;
+}
+#txt-img-fav{
+    position: relative;
+    top: 6px;
+    left: 8px;
+}
+.art-comic{
+    text-align: center;
+    padding-top: 19px;
+}
+#query_result{
+    position: relative;
+    bottom: 6px;
+}
+.img-remove-fav{
+    position: absolute;
+    right: 1px;
+    cursor: pointer;
+}
+.col-md-10{
+    width: 82.33333333%;
+}
+.col-md-2{
+    width: 17.66666667%;
 }
 /*
  de 768 hacia abajo

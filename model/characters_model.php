@@ -6,16 +6,16 @@
  * and open the template in the editor.
  */
 
-class personajes_marvel_model{
+class characters_model{
     
     private $key_public;
     private $key_privada;
-    private $personajes;
+    private $characters;
     private $limit;
     function __construct() {
         $this->key_public = '5eebda6a09ba3c58d7985c922db74477';
         $this->key_privada = 'df4756cd183ded54af400dd681e89a670da1d3da';
-        $this->personajes = array();
+        $this->characters = array();
         $this->limit = '100';
     }
             
@@ -23,13 +23,13 @@ class personajes_marvel_model{
         $name='';
         $orderBy='';
         $this->get_query_api($name, $orderBy);
-        return json_decode($this->personajes, true);
+        return json_decode($this->characters, true);
     }
     
     function get_query_name($nameStartsWith,$orderBy){
         
         $this->get_query_api($nameStartsWith, $orderBy);
-        return json_decode($this->personajes, true);
+        return json_decode($this->characters, true);
         
     }
             
@@ -46,9 +46,10 @@ class personajes_marvel_model{
         // create a new cURL resource
         $ch = curl_init();
         // set URL and other appropriate options
-        $query_name=($name!='')?'&nameStartsWith='.$name:'';
-        $query_orderBy=($orderBy!='')?'&orderBy='.$orderBy:'';
         
+        $query_name=($name!='')?'&nameStartsWith='.str_replace(" ", "%20",trim($name)):'';
+        $query_orderBy=($orderBy!='')?'&orderBy='.$orderBy:'';
+     
         curl_setopt($ch, CURLOPT_URL, "http://gateway.marvel.com:80/v1/public/characters?ts=$timestamp&limit=$this->limit$query_name$query_orderBy&apikey=$this->key_public&hash=$md5");
         
         curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -60,7 +61,7 @@ class personajes_marvel_model{
         );   
         // grab URL and pass it to the browser
          //Execute curl
-        $this->personajes=curl_exec($ch) or die(curl_error()); 
+        $this->characters=curl_exec($ch) or die(curl_error()); 
         //Format JSON output
         //echo str_replace('\\/', '/', $output);
         // close cURL resource, and free up system resources

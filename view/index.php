@@ -1,4 +1,7 @@
 <section id="query_result">
+<?php
+    if(count($query['data']['results'])>0){
+?>
 <div class="detalle_personajes col-md-10 col-xs-10 col-sm-10">
     <div class="container">
         <div class="row" id="row_characters">
@@ -26,13 +29,13 @@
                     <article class="white-panel">
                         <h4><b><?php echo $datos['name']; ?></b></h4>
                         <?php
-                            $max_str=152;
+                            $max_str=140;
                             $charter=substr($datos['description'],0,$max_str);
                             $str=(strlen($datos['description'])>$max_str)?$charter.'...':$charter;
                         ?>
-                        <p><?php echo $str; ?></p>
+                        <p class="txt-description-character"><?php echo $str; ?></p>
                         <p>
-                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".firstModal">VIEW MORE</button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".firstModal" onclick="view_comics_partners(<?php echo $datos['id'];?>);">VIEW MORE</button>
                         </p>
                     </article>
                 </div>
@@ -87,10 +90,10 @@
         </div>
     </div>
 </div>
-<div class="col-md-2 col-xs-2 col-sm-2 carrito_comic">.col-md-4</div>
+<div id="carrito_comic" class="col-md-2 col-xs-2 col-sm-2 carrito_comic"></div>
 <div class="col-md-12" id="row_pagination">
        <div class="row">
-        	<nav aria-label="...">
+         	<nav aria-label="...">
             	<ul class="pager" role="tablist">
                     <li class="previous" onclick="goTo(1);"><a href="#"><span aria-hidden="true">←</span> Previous</a></li>
                 <?php
@@ -107,4 +110,12 @@
             </nav>
         </div>
 </div>
+<?php
+    }else{
+?>
+<div  class="without-result-search col-md-10 col-xs-10 col-sm-10">
+    <article><h2><b>No results found for your search.</b></h2></article>
+</div>
+<?php }?>
 </section>
+<script>fill_section_comics();</script>
