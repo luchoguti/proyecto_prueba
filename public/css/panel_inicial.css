@@ -10,7 +10,9 @@ and open the template in the editor.
 body {
     background-color: #eee;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    padding-right: 0 !important;
 }
+
 .detalle_personajes.col-md-10.col-xs-10.col-sm-10 {
     background-color: #f4f4f4;
 }
@@ -43,12 +45,7 @@ body {
     margin-left: 17px;
     margin-top: 5px;
 }
-.grid-data{
-    background-color: white;
-    margin-top: 37px;
-    width: 47%;
-    margin-left: 25px;
-}
+
 img.img-responsive.img-circle {
     position: absolute;
     top: -13px;
@@ -118,6 +115,27 @@ article.white-panel {
 .col-md-2{
     width: 17.66666667%;
 }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991px) { 
+.grid-data{
+    width: 40%;
+}
+
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) { 
+.grid-data{
+    background-color: white;
+    margin-top: 37px;
+    width: 47%;
+    margin-left: 25px;
+}
+
+}
+
+
 /*
  de 768 hacia abajo
 */
@@ -151,4 +169,23 @@ article.white-panel {
     right: 0px;
     height: 184px;
   }
+  .grid-data{
+    width: 100%;
+   }
+}
+
+/*footer*/
+.secction-footer{
+    background-color: #2d2727;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.txt-footer{
+    float: left;
+    color: #b3b3b3;
+    padding-top: 22px;
+}
+.img-footer{
+    float: right;
 }

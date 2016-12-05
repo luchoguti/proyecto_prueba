@@ -12,22 +12,22 @@ class comics_model{
     private $key_privada;
     private $comics;
     private $limit;
-   
-    function __construct() {
+    //The variables to be used in the model are initialized
+    public function __construct() {
         $this->key_public = '5eebda6a09ba3c58d7985c922db74477';
         $this->key_privada = 'df4756cd183ded54af400dd681e89a670da1d3da';
         $this->comics = array();
         $this->limit = '30';
     }
-    
-    function get_comics($id_character){
+    //Returns all the comics returned by the marvel app.
+    public function get_comics($id_character){
         
         $this->get_query_api($id_character);
         return json_decode($this->comics, true);
         
     }
-    
-    function get_query_api($id_character){
+    //Query and return in json format comic information filtered from the api rest of marvel this method receives 1 parameter $ id_character
+    public function get_query_api($id_character){
         // To create a new TimeStamp
         $date = new DateTime();
         $timestamp=$date->getTimestamp();

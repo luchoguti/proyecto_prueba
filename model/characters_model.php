@@ -4,6 +4,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ * Contains all methods and attributes related to the characters.
  */
 
 class characters_model{
@@ -12,28 +13,29 @@ class characters_model{
     private $key_privada;
     private $characters;
     private $limit;
-    function __construct() {
+    //The variables to be used in the model are initialized
+    public function __construct() {
         $this->key_public = '5eebda6a09ba3c58d7985c922db74477';
         $this->key_privada = 'df4756cd183ded54af400dd681e89a670da1d3da';
         $this->characters = array();
         $this->limit = '100';
     }
-            
-    function get(){
+    //Returns all the characters returned by consulting the api rest of marvel.
+    public function get(){
         $name='';
         $orderBy='';
         $this->get_query_api($name, $orderBy);
         return json_decode($this->characters, true);
     }
-    
-    function get_query_name($nameStartsWith,$orderBy){
+    //Returns the query of characters filtered in the view with the data of nameStartsWithv and OrderBy available in api rest marvel.
+    public function get_query_name($nameStartsWith,$orderBy){
         
         $this->get_query_api($nameStartsWith, $orderBy);
         return json_decode($this->characters, true);
         
     }
-            
-    function get_query_api($name,$orderBy){
+    //Query and return in json format the filtered characters of the api rest of marvel this method receives 2 parameters $ name, $ orderBy.
+    public function get_query_api($name,$orderBy){
         // To create a new TimeStamp
         $date = new DateTime();
         $timestamp=$date->getTimestamp();

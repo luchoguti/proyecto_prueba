@@ -3,6 +3,7 @@
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
+This view contains the html of the page header where the initial panel and the search textbox are.
 -->
 <html>
     <head>

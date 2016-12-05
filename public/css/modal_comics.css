@@ -74,7 +74,7 @@ body .container
     text-align: center;
     padding: 15px;
 }
-#btn-add-fav{
+#btn-added-fav{
     background-color: #322827;
     max-height: 68px;
     cursor: pointer;
@@ -118,4 +118,14 @@ body .container
     max-height: 224px;
     overflow: overlay;
     padding-right: 19px;
+}
+.txt-btn-add{
+    padding-left: 11px;
+}
+#btn-add-fav{
+    background-color: #ffffff;
+    max-height: 68px;
+    cursor: pointer;
+    text-align: center;
+    padding: 15px;
 }

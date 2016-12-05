@@ -1,3 +1,4 @@
+<!--This view contains the initial information that is loaded by default at the start of the page and the job site is the html of the list of characters, favorite comics list and pagination.-->
 <section id="query_result">
 <?php
     if(count($query['data']['results'])>0){
