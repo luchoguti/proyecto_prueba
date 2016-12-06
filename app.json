@@ -1,0 +1,16 @@
+{
+  "name": "proyecto_prueba",
+  "description": "spa_changelle",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
